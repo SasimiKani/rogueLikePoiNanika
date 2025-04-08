@@ -87,6 +87,9 @@ class Game {
 		EffectsManager.showFloorOverlay(this.gameContainer, this.floor)
 		
 		switch (CONFIG.DIFFICULTY) {
+		case "easy":
+			EffectsManager.showFieldEffect(this.gameContainer, "🦀", 50)
+			break
 		case "normalPlus":
 			EffectsManager.showFieldEffect(this.gameContainer, "❄", 50)
 			break
@@ -698,6 +701,9 @@ class Game {
 					}
 				}
 				html += `<span class="${CONFIG.DIFFICULTY}">${tile}</span>`
+				if (tile == this.player.tile) { // プレイヤーなら
+					html += `<span class="color-mix-player-tile">　</span>`
+				}
 			}
 			html += '<br>'
 		}

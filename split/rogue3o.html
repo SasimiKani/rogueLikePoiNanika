@@ -13,9 +13,15 @@
 		<div class="ui-container">
 			<span id="debug"></span>
 			<div id="my-icon">
-				<input type="hidden" value="😊" name="my-icon">
-				<span class="icon"></span>
-				<button id="change-icon">アイコンを変更</button>
+				<div id="my-icon-view">
+					<span class="icon-position icon"></span>
+					<span class="icon-position icon-color" style="background-color: red;">　</span>
+				</div>
+				<div id="my-icon-crtl">
+					<input type="hidden" value="😊" name="my-icon">
+					<button id="change-icon">アイコンを変更</button>
+					<button id="change-icon-color">色を変更</button>
+				</div>
 			</div>
 			<div id="difficulty-container">難易度： <span id="difficulty"></span></div>
 			❤️ 体力: <div class="bar-container"><div id="hp-bar" class="bar hp"></div></div>

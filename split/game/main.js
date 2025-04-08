@@ -124,6 +124,11 @@ const myIcon = document.querySelector("input[name=my-icon]")
 const spanIcon	= document.querySelector("span.icon")
 spanIcon.textContent = myIcon.value
 
+const spanIconColor = document.querySelector("span.icon-color")
+const spanIconStyle = spanIcon.getBoundingClientRect()
+spanIconColor.style.height = `${spanIconStyle.height}px`
+spanIconColor.style.width = `${spanIconStyle.width}px`
+
 document.querySelector("button#change-icon").addEventListener("click", () => {
 	const modal = document.createElement("div")
 	const inputIcon = document.createElement("input")

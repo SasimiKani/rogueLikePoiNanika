@@ -36,6 +36,7 @@ class DifficultySelector {
 			for (let x = 0; x < this.gridWidth; x++) {
 				if (x === this.playerX && y === this.playerY) {
 					html += `<span>${this.myIcon}</span>`
+					html += `<span class="color-mix-player-tile">　</span>`
 				} else {
 					html += `<span>${this.grid[y][x]}</span>`
 				}
